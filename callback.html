@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Epic OAuth Callback</title>
+</head>
+<body>
+  <h2>Redirect successful!</h2>
+  <p>Epic has redirected you to this page.</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    const state = params.get('state');
+
+    document.write("<pre>");
+    document.write("Authorization Code: " + code + "\n");
+    document.write("State: " + state);
+    document.write("</pre>");
+  </script>
+</body>
+</html>
